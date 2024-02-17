@@ -7,7 +7,7 @@
 <img src="{{ request.GET.url }}">
 <form method="post">
     {% csrf_token %}
-    {{ from.as_p }}
+    {{ form.as_p }}
     <input type="submit" value="Bookmark it!">
 </form>
 {% endblock  %}
