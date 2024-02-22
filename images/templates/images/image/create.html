@@ -4,10 +4,16 @@
 
 {% block content %}
 <h2>Bookmark an image</h2>
-<img src="{{ request.GET.url }}">
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Bookmark it!">
-</form>
+<div class="row">
+    <div class="col">
+        <img src="{{ request.GET.url }}" width="100%">
+    </div>
+    <div class="col">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Bookmark it!</button>
+        </form>
+    </div>    
+</div>
 {% endblock  %}
