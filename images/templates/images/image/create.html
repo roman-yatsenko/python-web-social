@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block title %}Bookamrk an image{% endblock  %}
 
@@ -11,7 +12,7 @@
     <div class="col">
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
+            {{ form|crispy }}
             <button type="submit" class="btn btn-primary">Bookmark it!</button>
         </form>
     </div>    
